@@ -526,7 +526,7 @@ addOnEvent("Interview/Question/Where_was_your_mother_born_region", "click", "DRO
 addOnEvent("Interview/Question/Where_was_your_father_born_region", "click", "DROPDOWN_ITEM_VALUE = getFieldValue(\"Interview/Question/Where_was_your_father_born_region\")");
 addOnEvent("Interview/Question/Where_did_they_live_in_Australia_state", "click", "DROPDOWN_ITEM_VALUE = getFieldValue(\"Interview/Question/Where_did_they_live_in_Australia_state\")");
 addOnEvent("Interview/Question/Where_were_you_born_state", "click", "DROPDOWN_ITEM_VALUE = getFieldValue(\"Interview/Question/Where_were_you_born_state\")");
-addOnEvent("Interview/Question/Do_you_recall_many_incidents_of_xenophobia_or_bigotry", "click", "DROPDOWN_ITEM_VALUE = getFieldValue(\"Interview/Question/Do_you_recall_many_incidents_of_xenophobia_or_bigotry\")");
+addOnEvent("Interview/Question/Where_did_you_go_to_school_state", "click", "DROPDOWN_ITEM_VALUE = getFieldValue(\"Interview/Question/Where_did_you_go_to_school_state\")");
 
 /******************************************************************************/
 /*                             MENU VALUE GETTER                              */
@@ -909,8 +909,8 @@ makeVocab("DropDown", "Interview/Question/Where_was_your_father_born_region", "W
 makeVocab("DropDown", "Interview/Question/Where_did_they_live_in_Australia_state", "Where did they live in Australia state");
 makeVocab("RadioGroup", "Interview/Question/Did_your_mother_work", "Did your mother work");
 makeVocab("DropDown", "Interview/Question/Where_were_you_born_state", "Where were you born state");
-makeVocab("DropDown", "Interview/Question/Do_you_recall_many_incidents_of_xenophobia_or_bigotry", "Do you recall many incidents of xenophobia or bigotry");
-makeVocab("RadioGroup", "Interview/Question/Where_did_you_go_to_school_state", "Where did you go to school state");
+makeVocab("RadioGroup", "Interview/Question/Do_you_recall_many_incidents_of_xenophobia_or_bigotry", "Do you recall many incidents of xenophobia or bigotry");
+makeVocab("DropDown", "Interview/Question/Where_did_you_go_to_school_state", "Where did you go to school state");
 
 
 /******************************************************************************/

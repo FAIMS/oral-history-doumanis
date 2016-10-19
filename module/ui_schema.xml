@@ -346,14 +346,14 @@
         <input faims_attribute_type="measure" ref="Where_were_you_born_location" faims_attribute_name="Where were you born location">
           <label>{Where_were_you_born__location__}</label>
         </input>
-        <select1 faims_attribute_type="vocab" ref="Do_you_recall_many_incidents_of_xenophobia_or_bigotry" faims_attribute_name="Do you recall many incidents of xenophobia or bigotry">
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Do_you_recall_many_incidents_of_xenophobia_or_bigotry" faims_attribute_name="Do you recall many incidents of xenophobia or bigotry">
           <label>{Do_you_recall_many_incidents_of_xenophobia_or_bigotry_}</label>
           <item>
             <label>Options not loaded</label>
             <value>0</value>
           </item>
         </select1>
-        <select1 appearance="full" faims_attribute_type="vocab" ref="Where_did_you_go_to_school_state" faims_attribute_name="Where did you go to school state">
+        <select1 faims_attribute_type="vocab" ref="Where_did_you_go_to_school_state" faims_attribute_name="Where did you go to school state">
           <label>{Where_did_you_go_to_school__state__}</label>
           <item>
             <label>Options not loaded</label>

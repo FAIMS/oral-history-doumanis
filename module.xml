@@ -144,7 +144,7 @@
     <Where_were_you_born_location>
       Where were you born (location)?
     </Where_were_you_born_location>
-    <Do_you_recall_many_incidents_of_xenophobia_or_bigotry>
+    <Do_you_recall_many_incidents_of_xenophobia_or_bigotry t="radio">
       Do you recall many incidents of xenophobia or bigotry?
       <opts>
         <opt>Yes</opt>
@@ -152,7 +152,7 @@
         <opt>N/A</opt>
       </opts>
     </Do_you_recall_many_incidents_of_xenophobia_or_bigotry>
-    <Where_did_you_go_to_school_state t="radio">
+    <Where_did_you_go_to_school_state>
       Where did you go to school (state)?
       <opts>
         <opt>ACT</opt>
