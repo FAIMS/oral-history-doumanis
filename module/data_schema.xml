@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<dataSchema>
+  <ArchaeologicalElement name="Interview">
+    <description/>
+    <property name="Interview ID" isIdentifier="true" type="measure">
+      <description/>
+      <formatString><![CDATA[Interview $2: ]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Last name of interviewee" isIdentifier="true" type="measure">
+      <description/>
+      <formatString><![CDATA[$2]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Time when interview ended" isIdentifier="true" type="measure">
+      <description/>
+      <formatString><![CDATA[$2]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="First name of interviewee" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Gender" type="vocab">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Male}
+<description/></term>
+        <term>{Female}
+<description/></term>
+        <term>{N_A}
+<description/></term>
+      </lookup>
+    </property>
+    <property name="Place of interview" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Photo of signed consent form" type="file" file="true" thumbnail="true">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Attached recording" type="file" file="true" thumbnail="true">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Time when interview started" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Where was your mother born region" type="vocab">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Thrace}
+<description/></term>
+        <term>{Macedonia}
+<description/></term>
+        <term>{Thessaly}
+<description/></term>
+        <term>{Epirus}
+<description/></term>
+        <term>{Central_Greece}
+<description/></term>
+        <term>{Peloponnese}
+<description/></term>
+        <term>{Aegean_Islands}
+<description/></term>
+        <term>{Ionian_Island}
+<description/></term>
+        <term>{Crete}
+<description/></term>
+      </lookup>
+    </property>
+    <property name="Where was your mother born village" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Where was your father born region" type="vocab">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Thrace}
+<description/></term>
+        <term>{Macedonia}
+<description/></term>
+        <term>{Thessaly}
+<description/></term>
+        <term>{Epirus}
+<description/></term>
+        <term>{Central_Greece}
+<description/></term>
+        <term>{Peloponnese}
+<description/></term>
+        <term>{Aegean_Islands}
+<description/></term>
+        <term>{Ionian_Island}
+<description/></term>
+        <term>{Crete}
+<description/></term>
+      </lookup>
+    </property>
+    <property name="Where was your father born village" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="When did your mother migrate to Australia" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="When did your father migrate to Australia" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Where did they live in Australia state" type="vocab">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{ACT}
+<description/></term>
+        <term>{NSW}
+<description/></term>
+        <term>{NT}
+<description/></term>
+        <term>{QLD}
+<description/></term>
+        <term>{SA}
+<description/></term>
+        <term>{TAS}
+<description/></term>
+        <term>{VIC}
+<description/></term>
+        <term>{WA}
+<description/></term>
+      </lookup>
+    </property>
+    <property name="Where did they live in Australia locality" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="What was your fathers occupation" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Did your mother work" type="vocab">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Yes}
+<description/></term>
+        <term>{No}
+<description/></term>
+        <term>{N_A}
+<description/></term>
+      </lookup>
+    </property>
+    <property name="If so what was your mothers occupation" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="When were you born" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Where were you born state" type="vocab">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{ACT}
+<description/></term>
+        <term>{NSW}
+<description/></term>
+        <term>{NT}
+<description/></term>
+        <term>{QLD}
+<description/></term>
+        <term>{SA}
+<description/></term>
+        <term>{TAS}
+<description/></term>
+        <term>{VIC}
+<description/></term>
+        <term>{WA}
+<description/></term>
+      </lookup>
+    </property>
+    <property name="Where were you born location" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Do you recall many incidents of xenophobia or bigotry" type="vocab">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{Yes}
+<description/></term>
+        <term>{No}
+<description/></term>
+        <term>{N_A}
+<description/></term>
+      </lookup>
+    </property>
+    <property name="Where did you go to school state" type="vocab">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+      <lookup>
+        <term>{ACT}
+<description/></term>
+        <term>{NSW}
+<description/></term>
+        <term>{NT}
+<description/></term>
+        <term>{QLD}
+<description/></term>
+        <term>{SA}
+<description/></term>
+        <term>{TAS}
+<description/></term>
+        <term>{VIC}
+<description/></term>
+        <term>{WA}
+<description/></term>
+      </lookup>
+    </property>
+    <property name="Where did you go to school location" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="What was your first line of work occupation" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Latitude" type="measure">
+      <description/>
+      <formatString><![CDATA[$2]]></formatString>
+    </property>
+    <property name="Longitude" type="measure">
+      <description/>
+      <formatString><![CDATA[$2]]></formatString>
+    </property>
+    <property name="Northing" type="measure">
+      <description/>
+      <formatString><![CDATA[$2]]></formatString>
+    </property>
+    <property name="Easting" type="measure">
+      <description/>
+      <formatString><![CDATA[$2]]></formatString>
+    </property>
+    <property name="Accuracy" type="measure">
+      <description/>
+      <formatString><![CDATA[$2]]></formatString>
+    </property>
+  </ArchaeologicalElement>
+</dataSchema>

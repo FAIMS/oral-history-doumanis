@@ -1,0 +1,372 @@
+<?xml version="1.0"?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:jr="http://openrosa.org/javarosa" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Fill This In</h:title>
+    <model>
+      <instance>
+        <faims id="Fill_This_In">
+          <style>
+            <orientation>
+              <orientation/>
+            </orientation>
+            <even>
+              <layout_weight/>
+            </even>
+            <large>
+              <layout_weight/>
+            </large>
+          </style>
+          <Login>
+            <Login>
+              <User/>
+            </Login>
+          </Login>
+          <Control>
+            <Main>
+              <Record_Interview/>
+              <Existing_Interview/>
+            </Main>
+            <Default>
+              <Next_Interview_ID/>
+            </Default>
+            <Search>
+              <Colgroup_0>
+                <Col_0>
+                  <Search_Term/>
+                </Col_0>
+                <Col_1>
+                  <Search_Button/>
+                </Col_1>
+              </Colgroup_0>
+              <Entity_List/>
+            </Search>
+          </Control>
+          <Interview>
+            <Admin>
+              <Interview_ID/>
+              <First_name_of_interviewee/>
+              <Last_name_of_interviewee/>
+              <Gender/>
+              <Place_of_interview/>
+              <Colgroup_GPS_0>
+                <Col_0>
+                  <Latitude/>
+                </Col_0>
+                <Col_1>
+                  <Longitude/>
+                </Col_1>
+              </Colgroup_GPS_0>
+              <Colgroup_GPS_1>
+                <Col_0>
+                  <Northing/>
+                </Col_0>
+                <Col_1>
+                  <Easting/>
+                </Col_1>
+                <Col_2>
+                  <Accuracy/>
+                </Col_2>
+              </Colgroup_GPS_1>
+              <Take_From_GPS/>
+              <Photo_of_signed_consent_form/>
+              <Button_Photo_of_signed_consent_form/>
+              <Attached_recording/>
+              <Button_Attached_recording/>
+              <Start_of_interview/>
+              <Time_when_interview_started/>
+              <End_of_interview/>
+              <Time_when_interview_ended/>
+            </Admin>
+            <Question>
+              <Where_was_your_mother_born_region/>
+              <Where_was_your_mother_born_village/>
+              <Where_was_your_father_born_region/>
+              <Where_was_your_father_born_village/>
+              <When_did_your_mother_migrate_to_Australia/>
+              <When_did_your_father_migrate_to_Australia/>
+              <Where_did_they_live_in_Australia_state/>
+              <Where_did_they_live_in_Australia_locality/>
+              <What_was_your_fathers_occupation/>
+              <Did_your_mother_work/>
+              <If_so_what_was_your_mothers_occupation/>
+              <When_were_you_born/>
+              <Where_were_you_born_state/>
+              <Where_were_you_born_location/>
+              <Do_you_recall_many_incidents_of_xenophobia_or_bigotry/>
+              <Where_did_you_go_to_school_state/>
+              <Where_did_you_go_to_school_location/>
+              <What_was_your_first_line_of_work_occupation/>
+            </Question>
+          </Interview>
+          <logic/>
+        </faims>
+      </instance>
+      <bind type="decimal" nodeset="/faims/Control/Default/Next_Interview_ID"/>
+      <bind type="decimal" nodeset="/faims/Interview/Admin/Interview_ID"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group ref="style">
+      <label/>
+      <group ref="orientation">
+        <label/>
+        <input ref="orientation">
+          <label>horizontal</label>
+        </input>
+      </group>
+      <group ref="even">
+        <label/>
+        <input ref="layout_weight">
+          <label>1</label>
+        </input>
+      </group>
+      <group ref="large">
+        <label/>
+        <input ref="layout_weight">
+          <label>3</label>
+        </input>
+      </group>
+    </group>
+    <group ref="Login">
+      <label>{Login}</label>
+      <group ref="Login" faims_scrollable="false">
+        <label>{Login}</label>
+        <select1 appearance="compact" ref="User">
+          <label/>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+    <group ref="Control">
+      <label>{Control}</label>
+      <group ref="Main" faims_scrollable="false">
+        <label>{Main}</label>
+        <trigger ref="Record_Interview">
+          <label>{Record_Interview}</label>
+        </trigger>
+        <select1 appearance="compact" ref="Existing_Interview" faims_annotation="false" faims_certainty="false">
+          <label>{Existing_Interview}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="Default">
+        <label>{Default}</label>
+        <input ref="Next_Interview_ID" faims_style_class="required">
+          <label>{Next_Interview_ID}</label>
+        </input>
+      </group>
+      <group ref="Search" faims_scrollable="false">
+        <label>{search}</label>
+        <group faims_style="orientation" ref="Colgroup_0">
+          <label/>
+          <group faims_style="even" ref="Col_0">
+            <label/>
+            <input ref="Search_Term">
+              <label>{Search_Term}</label>
+            </input>
+          </group>
+          <group faims_style="large" ref="Col_1">
+            <label/>
+            <trigger ref="Search_Button">
+              <label>{Search}</label>
+            </trigger>
+          </group>
+        </group>
+        <select1 appearance="compact" ref="Entity_List">
+          <label>{Entity_List}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+    <group ref="Interview" faims_archent_type="Interview">
+      <label>{Interview}</label>
+      <group ref="Admin">
+        <label>{Admin}</label>
+        <input faims_attribute_type="measure" ref="Interview_ID" faims_attribute_name="Interview ID" faims_style_class="required">
+          <label>{Interview_ID}</label>
+        </input>
+        <input faims_attribute_type="measure" ref="First_name_of_interviewee" faims_attribute_name="First name of interviewee">
+          <label>{First_name_of_interviewee}</label>
+        </input>
+        <input faims_attribute_type="measure" ref="Last_name_of_interviewee" faims_attribute_name="Last name of interviewee" faims_style_class="required">
+          <label>{Last_name_of_interviewee}</label>
+        </input>
+        <select1 faims_attribute_type="vocab" ref="Gender" faims_attribute_name="Gender">
+          <label>{Gender}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <input faims_attribute_type="measure" ref="Place_of_interview" faims_attribute_name="Place of interview">
+          <label>{Place_of_interview}</label>
+        </input>
+        <group ref="Colgroup_GPS_0" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input ref="Latitude" faims_attribute_name="Latitude" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+              <label>{Latitude}</label>
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input ref="Longitude" faims_attribute_name="Longitude" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+              <label>{Longitude}</label>
+            </input>
+          </group>
+        </group>
+        <group ref="Colgroup_GPS_1" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input ref="Northing" faims_attribute_name="Northing" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+              <label>{Northing}</label>
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input ref="Easting" faims_attribute_name="Easting" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+              <label>{Easting}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input ref="Accuracy" faims_attribute_name="Accuracy" faims_attribute_type="measure" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+              <label>{Accuracy__m_}</label>
+            </input>
+          </group>
+        </group>
+        <trigger ref="Take_From_GPS">
+          <label>{Take_From_GPS}</label>
+        </trigger>
+        <select type="camera" faims_attribute_type="measure" faims_sync="true" ref="Photo_of_signed_consent_form" faims_attribute_name="Photo of signed consent form">
+          <label>{Photo_of_signed_consent_form}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select>
+        <trigger ref="Button_Photo_of_signed_consent_form">
+          <label>{Button_Photo_of_signed_consent_form}</label>
+        </trigger>
+        <select type="file" faims_attribute_type="measure" faims_sync="true" ref="Attached_recording" faims_attribute_name="Attached recording">
+          <label>{Attached_recording}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select>
+        <trigger ref="Button_Attached_recording">
+          <label>{Button_Attached_recording}</label>
+        </trigger>
+        <trigger ref="Start_of_interview">
+          <label>{Start_of_interview}</label>
+        </trigger>
+        <input faims_attribute_type="measure" ref="Time_when_interview_started" faims_attribute_name="Time when interview started">
+          <label>{Time_when_interview_started}</label>
+        </input>
+        <trigger ref="End_of_interview">
+          <label>{End_of_interview}</label>
+        </trigger>
+        <input faims_attribute_type="measure" ref="Time_when_interview_ended" faims_attribute_name="Time when interview ended" faims_style_class="required">
+          <label>{Time_when_interview_ended}</label>
+        </input>
+      </group>
+      <group ref="Question">
+        <label>{Question}</label>
+        <select1 faims_attribute_type="vocab" ref="Where_was_your_mother_born_region" faims_attribute_name="Where was your mother born region">
+          <label>{Where_was_your_mother_born__region__}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <input faims_attribute_type="measure" ref="Where_was_your_mother_born_village" faims_attribute_name="Where was your mother born village">
+          <label>{Where_was_your_mother_born__village__}</label>
+        </input>
+        <select1 faims_attribute_type="vocab" ref="Where_was_your_father_born_region" faims_attribute_name="Where was your father born region">
+          <label>{Where_was_your_father_born__region__}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <input faims_attribute_type="measure" ref="Where_was_your_father_born_village" faims_attribute_name="Where was your father born village">
+          <label>{Where_was_your_father_born__village__}</label>
+        </input>
+        <input faims_attribute_type="measure" ref="When_did_your_mother_migrate_to_Australia" faims_attribute_name="When did your mother migrate to Australia">
+          <label>{When_did_your_mother_migrate_to_Australia_}</label>
+        </input>
+        <input faims_attribute_type="measure" ref="When_did_your_father_migrate_to_Australia" faims_attribute_name="When did your father migrate to Australia">
+          <label>{When_did_your_father_migrate_to_Australia_}</label>
+        </input>
+        <select1 faims_attribute_type="vocab" ref="Where_did_they_live_in_Australia_state" faims_attribute_name="Where did they live in Australia state">
+          <label>{Where_did_they_live_in_Australia__state__}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <input faims_attribute_type="measure" ref="Where_did_they_live_in_Australia_locality" faims_attribute_name="Where did they live in Australia locality">
+          <label>{Where_did_they_live_in_Australia__locality__}</label>
+        </input>
+        <input faims_attribute_type="measure" ref="What_was_your_fathers_occupation" faims_attribute_name="What was your fathers occupation">
+          <label>{What_was_your_father_s_occupation_}</label>
+        </input>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Did_your_mother_work" faims_attribute_name="Did your mother work">
+          <label>{Did_your_mother_work_}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <input faims_attribute_type="measure" ref="If_so_what_was_your_mothers_occupation" faims_attribute_name="If so what was your mothers occupation">
+          <label>{If_so__what_was_your_mother_s_occupation_}</label>
+        </input>
+        <input faims_attribute_type="measure" ref="When_were_you_born" faims_attribute_name="When were you born">
+          <label>{When_were_you_born_}</label>
+        </input>
+        <select1 faims_attribute_type="vocab" ref="Where_were_you_born_state" faims_attribute_name="Where were you born state">
+          <label>{Where_were_you_born__state__}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <input faims_attribute_type="measure" ref="Where_were_you_born_location" faims_attribute_name="Where were you born location">
+          <label>{Where_were_you_born__location__}</label>
+        </input>
+        <select1 faims_attribute_type="vocab" ref="Do_you_recall_many_incidents_of_xenophobia_or_bigotry" faims_attribute_name="Do you recall many incidents of xenophobia or bigotry">
+          <label>{Do_you_recall_many_incidents_of_xenophobia_or_bigotry_}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <select1 appearance="full" faims_attribute_type="vocab" ref="Where_did_you_go_to_school_state" faims_attribute_name="Where did you go to school state">
+          <label>{Where_did_you_go_to_school__state__}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>0</value>
+          </item>
+        </select1>
+        <input faims_attribute_type="measure" ref="Where_did_you_go_to_school_location" faims_attribute_name="Where did you go to school location">
+          <label>{Where_did_you_go_to_school__location__}</label>
+        </input>
+        <input faims_attribute_type="measure" ref="What_was_your_first_line_of_work_occupation" faims_attribute_name="What was your first line of work occupation">
+          <label>{What_was_your_first_line_of_work___occupation_}</label>
+        </input>
+      </group>
+    </group>
+  </h:body>
+</h:html>

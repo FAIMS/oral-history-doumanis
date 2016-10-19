@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module suppressWarnings="true">
+
+<Login f="nodata">
+  <Login f="noscroll">
+    <User t="list" f="user nolabel" l="Control"/>
+  </Login>
+</Login>
+
+<Control f="nodata">
+  <Main f="noscroll">
+    <Record_Interview   t="button" l="Interview"/>
+    <Existing_Interview t="list"   e="Interview"/>
+  </Main>
+  <Default>
+    <autonum/>
+  </Default>
+  <search/>
+</Control>
+
+<Interview>
+  <Admin>
+    <Interview_ID f="id autonum notnull">
+      <str>
+        <pos>1</pos>
+        <fmt>Interview $2: </fmt>
+      </str>
+    </Interview_ID>
+    <First_name_of_interviewee/>
+    <Last_name_of_interviewee f="id notnull">
+      <str>
+        <pos>2</pos>
+        <fmt>$2</fmt>
+      </str>
+    </Last_name_of_interviewee>
+    <Gender>
+      <opts>
+        <opt>Male</opt>
+        <opt>Female</opt>
+        <opt>N/A</opt>
+      </opts>
+    </Gender>
+    <Place_of_interview/>
+    <gps/>
+    <Photo_of_signed_consent_form t="camera"/>
+    <Attached_recording t="file"/>
+    <Start_of_interview t="button"/>
+    <Time_when_interview_started/>
+    <End_of_interview t="button"/>
+    <Time_when_interview_ended f="id notnull">
+      <str>
+        <pos>3</pos>
+        <fmt>$2</fmt>
+      </str>
+    </Time_when_interview_ended>
+  </Admin>
+  <Question>
+    <Where_was_your_mother_born_region>
+      Where was your mother born (region)?
+      <opts>
+        <opt>Thrace</opt>
+        <opt>Macedonia</opt>
+        <opt>Thessaly</opt>
+        <opt>Epirus</opt>
+        <opt>Central Greece</opt>
+        <opt>Peloponnese</opt>
+        <opt>Aegean Islands</opt>
+        <opt>Ionian Island</opt>
+        <opt>Crete</opt>
+      </opts>
+    </Where_was_your_mother_born_region>
+    <Where_was_your_mother_born_village>
+      Where was your mother born (village)?
+    </Where_was_your_mother_born_village>
+    <Where_was_your_father_born_region>
+      Where was your father born (region)?
+      <opts>
+        <opt>Thrace</opt>
+        <opt>Macedonia</opt>
+        <opt>Thessaly</opt>
+        <opt>Epirus</opt>
+        <opt>Central Greece</opt>
+        <opt>Peloponnese</opt>
+        <opt>Aegean Islands</opt>
+        <opt>Ionian Island</opt>
+        <opt>Crete</opt>
+      </opts>
+    </Where_was_your_father_born_region>
+    <Where_was_your_father_born_village>
+      Where was your father born (village)?
+    </Where_was_your_father_born_village>
+    <When_did_your_mother_migrate_to_Australia>
+      When did your mother migrate to Australia?
+    </When_did_your_mother_migrate_to_Australia>
+    <When_did_your_father_migrate_to_Australia>
+      When did your father migrate to Australia?
+    </When_did_your_father_migrate_to_Australia>
+    <Where_did_they_live_in_Australia_state>
+      Where did they live in Australia (state)?
+      <opts>
+        <opt>ACT</opt>
+        <opt>NSW</opt>
+        <opt>NT</opt>
+        <opt>QLD</opt>
+        <opt>SA</opt>
+        <opt>TAS</opt>
+        <opt>VIC</opt>
+        <opt>WA</opt>
+      </opts>
+    </Where_did_they_live_in_Australia_state>
+    <Where_did_they_live_in_Australia_locality>
+      Where did they live in Australia (locality)?
+    </Where_did_they_live_in_Australia_locality>
+    <What_was_your_fathers_occupation>
+      What was your father’s occupation?
+    </What_was_your_fathers_occupation>
+    <Did_your_mother_work t="radio">
+      Did your mother work?
+      <opts>
+        <opt>Yes</opt>
+        <opt>No</opt>
+        <opt>N/A</opt>
+      </opts>
+    </Did_your_mother_work>
+    <If_so_what_was_your_mothers_occupation>
+      If so, what was your mother’s occupation?
+    </If_so_what_was_your_mothers_occupation>
+    <When_were_you_born>
+      When were you born?
+    </When_were_you_born>
+    <Where_were_you_born_state>
+      Where were you born (state)?
+      <opts>
+        <opt>ACT</opt>
+        <opt>NSW</opt>
+        <opt>NT</opt>
+        <opt>QLD</opt>
+        <opt>SA</opt>
+        <opt>TAS</opt>
+        <opt>VIC</opt>
+        <opt>WA</opt>
+      </opts>
+    </Where_were_you_born_state>
+    <Where_were_you_born_location>
+      Where were you born (location)?
+    </Where_were_you_born_location>
+    <Do_you_recall_many_incidents_of_xenophobia_or_bigotry>
+      Do you recall many incidents of xenophobia or bigotry?
+      <opts>
+        <opt>Yes</opt>
+        <opt>No</opt>
+        <opt>N/A</opt>
+      </opts>
+    </Do_you_recall_many_incidents_of_xenophobia_or_bigotry>
+    <Where_did_you_go_to_school_state t="radio">
+      Where did you go to school (state)?
+      <opts>
+        <opt>ACT</opt>
+        <opt>NSW</opt>
+        <opt>NT</opt>
+        <opt>QLD</opt>
+        <opt>SA</opt>
+        <opt>TAS</opt>
+        <opt>VIC</opt>
+        <opt>WA</opt>
+      </opts>
+    </Where_did_you_go_to_school_state>
+    <Where_did_you_go_to_school_location>
+      Where did you go to school (location)?
+    </Where_did_you_go_to_school_location>
+    <What_was_your_first_line_of_work_occupation>
+      What was your first line of work / occupation?
+    </What_was_your_first_line_of_work_occupation>
+  </Question>
+</Interview>
+
+<logic><![CDATA[
+void clickStartOfInterview() {
+  String ref = "Interview/Admin/Time_when_interview_started";
+  setToTimestampNow(ref);
+}
+
+void clickEndOfInterview() {
+  String ref = "Interview/Admin/Time_when_interview_ended";
+  setToTimestampNow(ref);
+}
+
+addOnEvent("Interview/Admin/Start_of_interview", "click", "clickStartOfInterview()");
+addOnEvent("Interview/Admin/End_of_interview",   "click", "clickEndOfInterview()");
+]]></logic>
+
+</module>
