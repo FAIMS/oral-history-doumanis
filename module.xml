@@ -30,7 +30,7 @@
     <Last_name_of_interviewee f="id notnull">
       <str>
         <pos>2</pos>
-        <fmt>$2</fmt>
+        <fmt>$2 </fmt>
       </str>
     </Last_name_of_interviewee>
     <Gender>
@@ -67,6 +67,8 @@
         <opt>Aegean Islands</opt>
         <opt>Ionian Island</opt>
         <opt>Crete</opt>
+        <opt>Outside of Greece</opt>
+        <opt>Non-Greek</opt>
       </opts>
     </Where_was_your_mother_born_region>
     <Where_was_your_mother_born_village>
@@ -84,6 +86,8 @@
         <opt>Aegean Islands</opt>
         <opt>Ionian Island</opt>
         <opt>Crete</opt>
+        <opt>Outside of Greece</opt>
+        <opt>Non-Greek</opt>
       </opts>
     </Where_was_your_father_born_region>
     <Where_was_your_father_born_village>
@@ -171,6 +175,7 @@
     <What_was_your_first_line_of_work_occupation>
       What was your first line of work / occupation?
     </What_was_your_first_line_of_work_occupation>
+    <Notes/>
   </Question>
 </Interview>
 

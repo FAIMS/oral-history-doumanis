@@ -96,6 +96,7 @@
               <Where_did_you_go_to_school_state/>
               <Where_did_you_go_to_school_location/>
               <What_was_your_first_line_of_work_occupation/>
+              <Notes/>
             </Question>
           </Interview>
           <logic/>
@@ -365,6 +366,9 @@
         </input>
         <input faims_attribute_type="measure" ref="What_was_your_first_line_of_work_occupation" faims_attribute_name="What was your first line of work occupation">
           <label>{What_was_your_first_line_of_work___occupation_}</label>
+        </input>
+        <input faims_attribute_type="measure" ref="Notes" faims_attribute_name="Notes">
+          <label>{Notes}</label>
         </input>
       </group>
     </group>

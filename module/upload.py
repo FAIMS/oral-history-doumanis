@@ -30,7 +30,7 @@ filenames = [
 username = 'faimsadmin@intersect.org.au'
 password = 'Pass.123'
 
-server = 'dev'
+server = 'faims2'
 url    = 'http://%s.fedarch.org' % server
 
 ################################################################################
@@ -63,10 +63,11 @@ else:
 moduleName = moduleLocation.split(os.sep)
 if moduleName[-1] == 'module': moduleName = moduleName[-2]
 else:                          moduleName = moduleName[-1]
+moduleName = 'Oral History Doumanis Alpha'
 
 # Check that all the given paths really exist
 if not os.path.exists(moduleLocation):
-    print 'ERROR: given module location does not exist'
+    print 'ERROR: given module location %s does not exist' % moduleLocation
     exit()
 
 isMissing = False

@@ -9,7 +9,7 @@
     </property>
     <property name="Last name of interviewee" isIdentifier="true" type="measure">
       <description/>
-      <formatString><![CDATA[$2]]></formatString>
+      <formatString><![CDATA[$2 ]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="Time when interview ended" isIdentifier="true" type="measure">
@@ -78,6 +78,10 @@
 <description/></term>
         <term>{Crete}
 <description/></term>
+        <term>{Outside_of_Greece}
+<description/></term>
+        <term>{Non_Greek}
+<description/></term>
       </lookup>
     </property>
     <property name="Where was your mother born village" type="measure">
@@ -107,6 +111,10 @@
         <term>{Ionian_Island}
 <description/></term>
         <term>{Crete}
+<description/></term>
+        <term>{Outside_of_Greece}
+<description/></term>
+        <term>{Non_Greek}
 <description/></term>
       </lookup>
     </property>
@@ -251,6 +259,11 @@
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
     </property>
     <property name="What was your first line of work occupation" type="measure">
+      <description/>
+      <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
+      <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
+    </property>
+    <property name="Notes" type="measure">
       <description/>
       <formatString><![CDATA[{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}]]></formatString>
       <appendCharacterString><![CDATA[ - ]]></appendCharacterString>
