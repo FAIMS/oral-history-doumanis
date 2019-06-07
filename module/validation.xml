@@ -1,19 +1,36 @@
-<?xml version="1.0"?>
+<?xml version='1.0' encoding='utf-8'?>
 <ValidationSchema>
   <ArchaeologicalElement name="Interview">
     <property name="Interview ID">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
-      </validator>
-    </property>
-    <property name="Last name of interviewee">
-      <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param type="field" value="measure"/>
       </validator>
     </property>
     <property name="Time when interview ended">
       <validator type="blankchecker">
-        <param value="measure" type="field"/>
+        <param type="field" value="measure"/>
+      </validator>
+    </property>
+  </ArchaeologicalElement>
+  <ArchaeologicalElement name="Participant">
+    <property name="Interview ID">
+      <validator type="blankchecker">
+        <param type="field" value="measure"/>
+      </validator>
+    </property>
+    <property name="Interviewee ID">
+      <validator type="blankchecker">
+        <param type="field" value="measure"/>
+      </validator>
+    </property>
+    <property name="First name of interviewee">
+      <validator type="blankchecker">
+        <param type="field" value="measure"/>
+      </validator>
+    </property>
+    <property name="Last name of interviewee">
+      <validator type="blankchecker">
+        <param type="field" value="measure"/>
       </validator>
     </property>
   </ArchaeologicalElement>

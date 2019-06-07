@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<module suppressWarnings="true">
-
+<module>
 <Login f="nodata">
   <Login f="noscroll">
     <User t="list" f="user nolabel" l="Control"/>
@@ -9,7 +8,7 @@
 
 <Control f="nodata">
   <Main f="noscroll">
-    <Record_Interview   t="button" l="Interview"/>
+    <New_Interview   t="button" l="Interview"/>
     <Existing_Interview t="list"   e="Interview"/>
   </Main>
   <Default>
@@ -19,42 +18,60 @@
 </Control>
 
 <Interview>
+  <fmt>Interview {{Interview_ID}}: {{Time_when_interview_ended}}</fmt>
   <Admin>
-    <Interview_ID f="id autonum notnull">
-      <str>
-        <pos>1</pos>
-        <fmt>Interview $2: </fmt>
-      </str>
+    <Interview_ID f="id autonum notnull">      
     </Interview_ID>
-    <First_name_of_interviewee/>
-    <Last_name_of_interviewee f="id notnull">
-      <str>
-        <pos>2</pos>
-        <fmt>$2 </fmt>
-      </str>
-    </Last_name_of_interviewee>
+    
+    
+    <Interview_location>
+      Interview Location (address, city, state)
+    </Interview_location>
+
+
+    <gps/>
+
+    
+    <Start_of_interview t="button"/>
+    <Time_when_interview_started/>
+    <End_of_interview t="button"/>
+    <Time_when_interview_ended f="id notnull">    
+    </Time_when_interview_ended>
+    <Record_interview_on_device t="audio"/>    
+  </Admin>
+  
+  <Participants f="noscroll">
+    <New_Participant t="button" lc="Participant"/>
+    <List_of_Participants t="list" ec="Participant"/>
+
+  </Participants>
+  <External_Recordings>
+    <Attach_Zoom_H2N_file t="file"/>
+    <Attach_Zoom_H6_Channel_1_file t="file"/>
+    <Attach_Zoom_H6_Channel_2_file t="file"/>
+    <Attach_Zoom_H6_Channel_3_file t="file"/>
+    <Attach_Zoom_H6_Channel_4_file t="file"/>
+    <Attach_Zoom_H6_onboard_mic_file t="file"/>
+  </External_Recordings>
+</Interview>
+<Participant>
+  <fmt>Interview {{Interview_ID}}-Participant {{Interviewee_ID}}: {{First_name_of_interviewee}} {{Last_name_of_interviewee}}</fmt>
+  <Participant_Admin>
+    <Interview_ID f="id notnull" i="Interview/Admin/Interview_ID"/>
+    <Interviewee_ID f="id autonum notnull"/>
+    <First_name_of_interviewee f="id notnull"/>
+    <Last_name_of_interviewee f="id notnull"/>
     <Gender>
       <opts>
         <opt>Male</opt>
         <opt>Female</opt>
         <opt>N/A</opt>
       </opts>
-    </Gender>
-    <Place_of_interview/>
-    <gps/>
-    <Photo_of_signed_consent_form t="camera"/>
-    <Attached_recording t="file"/>
-    <Start_of_interview t="button"/>
-    <Time_when_interview_started/>
-    <End_of_interview t="button"/>
-    <Time_when_interview_ended f="id notnull">
-      <str>
-        <pos>3</pos>
-        <fmt>$2</fmt>
-      </str>
-    </Time_when_interview_ended>
-  </Admin>
-  <Question>
+    </Gender>          
+    <Photo_of_signed_consent_form t="camera"/>    
+  </Participant_Admin>
+  <Participant_Questions>
+    
     <Where_was_your_mother_born_region>
       Where was your mother born (region)?
       <opts>
@@ -93,9 +110,25 @@
     <Where_was_your_father_born_village>
       Where was your father born (village)?
     </Where_was_your_father_born_village>
+    <Did_your_mother_migrate_to_Australia t="radio">
+      Did your mother migrate to Austraila?
+      <opts>
+        <opt>Yes</opt>
+        <opt>No</opt>
+        <opt>Other</opt>
+      </opts>
+    </Did_your_mother_migrate_to_Australia>
     <When_did_your_mother_migrate_to_Australia>
       When did your mother migrate to Australia?
     </When_did_your_mother_migrate_to_Australia>
+    <Did_your_father_migrate_to_Australia t="radio">
+      Did your father migrate to Austraila?
+      <opts>
+        <opt>Yes</opt>
+        <opt>No</opt>
+        <opt>Other</opt>
+      </opts>
+    </Did_your_father_migrate_to_Australia>
     <When_did_your_father_migrate_to_Australia>
       When did your father migrate to Australia?
     </When_did_your_father_migrate_to_Australia>
@@ -110,13 +143,14 @@
         <opt>TAS</opt>
         <opt>VIC</opt>
         <opt>WA</opt>
+        <opt>Other</opt>
       </opts>
     </Where_did_they_live_in_Australia_state>
     <Where_did_they_live_in_Australia_locality>
       Where did they live in Australia (locality)?
     </Where_did_they_live_in_Australia_locality>
     <What_was_your_fathers_occupation>
-      What was your father’s occupation?
+      What was your father's occupation?
     </What_was_your_fathers_occupation>
     <Did_your_mother_work t="radio">
       Did your mother work?
@@ -127,7 +161,7 @@
       </opts>
     </Did_your_mother_work>
     <If_so_what_was_your_mothers_occupation>
-      If so, what was your mother’s occupation?
+      If so, what was your mother's occupation?
     </If_so_what_was_your_mothers_occupation>
     <When_were_you_born>
       When were you born?
@@ -143,19 +177,13 @@
         <opt>TAS</opt>
         <opt>VIC</opt>
         <opt>WA</opt>
+        <opt>Other</opt>
       </opts>
     </Where_were_you_born_state>
     <Where_were_you_born_location>
-      Where were you born (location)?
+      Where were you born (city, town, locality)?
     </Where_were_you_born_location>
-    <Do_you_recall_many_incidents_of_xenophobia_or_bigotry t="radio">
-      Do you recall many incidents of xenophobia or bigotry?
-      <opts>
-        <opt>Yes</opt>
-        <opt>No</opt>
-        <opt>N/A</opt>
-      </opts>
-    </Do_you_recall_many_incidents_of_xenophobia_or_bigotry>
+   
     <Where_did_you_go_to_school_state>
       Where did you go to school (state)?
       <opts>
@@ -170,15 +198,28 @@
       </opts>
     </Where_did_you_go_to_school_state>
     <Where_did_you_go_to_school_location>
-      Where did you go to school (location)?
+      Where did you go to school (city, town, locality)?
     </Where_did_you_go_to_school_location>
+    <Where_did_you_go_to_university>
+      Where did you go to university (institution, location)?
+    </Where_did_you_go_to_university>
     <What_was_your_first_line_of_work_occupation>
       What was your first line of work / occupation?
     </What_was_your_first_line_of_work_occupation>
+     <Do_you_recall_many_incidents_of_xenophobia_or_bigotry t="radio">
+      Do you recall many incidents of xenophobia or bigotry?
+      <opts>
+        <opt>Yes</opt>
+        <opt>No</opt>
+        <opt>N/A</opt>
+      </opts>
+    </Do_you_recall_many_incidents_of_xenophobia_or_bigotry>
     <Notes/>
-  </Question>
-</Interview>
-
+  
+ 
+    
+  </Participant_Questions>
+</Participant>
 <logic><![CDATA[
 void clickStartOfInterview() {
   String ref = "Interview/Admin/Time_when_interview_started";
